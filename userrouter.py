@@ -11,7 +11,7 @@ class UserRouter:
         self.__prayers = prs
 
     async def start_message(self,msg:Message):
-        welcome = f"""Assalomu alaykum {msg.from_user.full_name} Ibodatingiz har doim qabul bulsin """
+        welcome = f"""Assalomu alaykum {msg.from_user.full_name} Ibodatingiz har doim qabul bo'lsin """
         await msg.answer(text=welcome, reply_markup=self.__pray_time.get_regions())
 
     async def click_to_regions(self,clb:CallbackQuery):
